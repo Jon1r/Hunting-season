@@ -31,9 +31,7 @@ func _on_Hunter_shoot(bullet, _position, _direction):
 
 
 func _process(delta):
-	if G.sleep:
-		$Fall.show()
-		G.sleep = false
+	pass
 
 
 func _on_MainMenu_pressed():
@@ -49,8 +47,14 @@ func _on_Replay_pressed():
 func _on_Timer_timeout():
 	if not G.sleep:
 		$Next.show()
+		print('hui')
 		if G.current_level == G.levels.size()-1:
 			$Next/Nextlvl.hide()
+	else:
+		$Fall.show()
+		print("hello")
+		G.sleep = false
+		$Timer.stop()
 
 
 func _on_Nextlvl_pressed():

@@ -10,7 +10,7 @@
 extents = Vector2( 31.3709, 31.3692 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 280.319
+radius = 1028.25
 
 [node name="Hunter" type="KinematicBody2D"]
 collision_layer = 2
@@ -37,7 +37,6 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="DetectZone" type="Area2D" parent="."]
-visible = false
 collision_layer = 2147483650
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectZone"]
