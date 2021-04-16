@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Trees/деревья 1.0.png" type="Texture" id=1]
+
+[node name="tree1" type="StaticBody2D"]
+scale = Vector2( 0.2, 0.2 )
+
+[node name="деревья 10" type="Sprite" parent="."]
+position = Vector2( 1.97729, -160.15 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 869.212, 167.758, 858.818, 1130.44 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1124.33, -775.671 )
+scale = Vector2( 3.22832, 3.52939 )
+polygon = PoolVector2Array( 336.441, 218.636, 347.785, 225.259, 360.795, 219.026, 349.953, 212.509 )

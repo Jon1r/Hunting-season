@@ -42,3 +42,7 @@ func _on_Draggable_input_event(viewport, event, shape_idx):
 
 
 
+
+
+func _on_Button_pressed():
+	pass # Replace with function body.

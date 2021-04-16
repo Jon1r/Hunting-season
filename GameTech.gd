@@ -10,14 +10,14 @@ var a = 2
 func _ready():
 	$Fall.hide()
 	$Next.hide()
-	$Button.show()
-
+	$TouchScreenCamera/Button.show()
+	$TouchScreenCamera.position = $Rabbit.position
 
 
 
 func _on_Button_pressed():
 	G.fire = true
-	$Button.hide()
+	$TouchScreenCamera/Button.hide()
 	$Timer.start()
 
 
@@ -61,3 +61,9 @@ func _on_Nextlvl_pressed():
 	G.next_level()
 	$Fall.hide()
 	$Next.hide()
+
+
+func _on_Hunter_iso_shoot(bullet, _position, _direction):
+	var b = bullet.instance()
+	add_child(b)
+	b.start(_position, _direction)

@@ -1,17 +1,32 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/th.jpg" type="Texture" id=1]
 [ext_resource path="res://GameTech.gd" type="Script" id=2]
 [ext_resource path="res://Rabbit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Hunter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TouchScreenCamera.tscn" type="PackedScene" id=6]
 
 [node name="Test1" type="Node"]
 script = ExtResource( 2 )
 
+[node name="TouchScreenCamera" parent="." instance=ExtResource( 6 )]
+current = true
+target = NodePath("../Rabbit")
+
+[node name="Button" type="Button" parent="TouchScreenCamera"]
+margin_left = -228.361
+margin_top = 229.772
+margin_right = 274.639
+margin_bottom = 279.772
+text = "Fire"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1024.07, 380.794 )
-scale = Vector2( 3.46193, 2.02144 )
+position = Vector2( 1315.81, 474.182 )
+scale = Vector2( 5.30332, 3.18553 )
 z_index = -2
 texture = ExtResource( 1 )
 offset = Vector2( -145.366, -36.5091 )
@@ -20,16 +35,6 @@ offset = Vector2( -145.366, -36.5091 )
 position = Vector2( 817.442, 402.559 )
 scale = Vector2( 0.8, 0.8 )
 z_index = -1
-
-[node name="Button" type="Button" parent="."]
-margin_left = 854.987
-margin_top = 530.791
-margin_right = 989.987
-margin_bottom = 575.791
-text = "Fire"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Trees" type="Node2D" parent="."]
 
@@ -156,8 +161,8 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
+[connection signal="pressed" from="TouchScreenCamera/Button" to="." method="_on_Button_pressed"]
 [connection signal="sleep" from="Rabbit" to="." method="_on_Rabbit_sleep"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="shoot" from="Hunters/Hunter" to="." method="_on_Hunter_shoot"]
 [connection signal="pressed" from="Fall/MainMenu" to="." method="_on_MainMenu_pressed"]
 [connection signal="pressed" from="Fall/Replay" to="." method="_on_Replay_pressed"]
