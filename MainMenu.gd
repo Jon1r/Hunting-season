@@ -18,3 +18,7 @@ func _ready():
 
 func _on_Button_pressed():
 	G.next_level()
+
+
+func _on_lvlSelect_pressed():
+	G.select_lvl()

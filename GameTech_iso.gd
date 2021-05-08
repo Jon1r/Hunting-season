@@ -18,10 +18,9 @@ func _on_Button_pressed():
 	$Timer.start()
 
 
-
 func _on_Hunter_shoot(bullet, _position, _direction):
 	var b = bullet.instance()
-	add_child(b)
+	$YSort.add_child(b)
 	b.start(_position, _direction)
 	
 

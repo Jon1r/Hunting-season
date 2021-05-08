@@ -13,6 +13,7 @@ func shoot():
 	var dir = Vector2(1,0).rotated($gun_0.global_rotation)
 	emit_signal("shoot", Bullet, $gun_0.global_position, dir)
 	
+	
 
 
 # Called when the node enters the scene tree for the first time.

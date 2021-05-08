@@ -19,19 +19,19 @@ cell_size = Vector2( 128, 64 )
 format = 1
 
 [node name="kust_2_iso" type="Sprite" parent="."]
-position = Vector2( 698.535, 360.889 )
+position = Vector2( 2.27277, 7.71249 )
 rotation = 0.299283
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
 [node name="gun_0" type="Sprite" parent="."]
-position = Vector2( 700.913, 350.64 )
+position = Vector2( 4.65088, -2.53647 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
 offset = Vector2( 264.004, -2.37842 )
 
 [node name="kust_1_iso" type="Sprite" parent="."]
-position = Vector2( 697.338, 345.483 )
+position = Vector2( 1.07581, -7.69351 )
 rotation = 0.288126
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
@@ -40,10 +40,9 @@ texture = ExtResource( 3 )
 wait_time = 2.0
 
 [node name="DetectZone" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectZone"]
-position = Vector2( 698.049, 354.448 )
+position = Vector2( 1.26257, -3.28906 )
 shape = SubResource( 1 )
 [connection signal="area_entered" from="DetectZone" to="." method="_on_DetectZone_area_entered"]
 [connection signal="area_exited" from="DetectZone" to="." method="_on_DetectZone_area_exited"]

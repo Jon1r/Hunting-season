@@ -21,3 +21,5 @@ position = Vector2( 0.5, -29.5 )
 shape = SubResource( 1 )
 [connection signal="area_entered" from="." to="." method="_on_Rabbit_area_entered"]
 [connection signal="input_event" from="." to="." method="_on_Draggable_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_Rabbit_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Rabbit_mouse_exited"]

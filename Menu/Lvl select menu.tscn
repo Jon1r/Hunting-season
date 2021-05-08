@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lvl select menu.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Base_button.tscn" type="PackedScene" id=2]
+
+[node name="Lvl select menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = -2.0
+margin_right = -100.0
+margin_bottom = -2.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+base_button = ExtResource( 2 )
+total_levels = 4
+grid = NodePath("VSplitContainer/GridContainer")
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -431.0
+margin_right = 420.0
+margin_bottom = 89.0
+text = "Lvl select"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = 132.0
+margin_right = 706.0
+margin_bottom = 1.0
+rect_scale = Vector2( 0.549828, 1.00827 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="VSplitContainer"]
+margin_right = 1538.0
+size_flags_horizontal = 3
+custom_constants/vseparation = 50
+custom_constants/hseparation = 150
+columns = 8
